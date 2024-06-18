@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font: normal 16pt arial;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var nome = window.prompt("Qual é o seu nome?");
+      var sal = Number(window.prompt("Qual o seu salário?")); // Number.ParseInt ou Number.ParseFloat
+      document.write(sal.toFixed(3).replace(".", ",") + `</br>`); // Defini o número de casas decimais
+      document.write(
+        `Olá <strong>${nome}</strong>, o seu nome tem ${nome.length} letras. </br>`
+      );
+      document.write(`O seu nome em maiúsculo é ${nome.toUpperCase()}. </br>`);
+      document.write(`O seu nome em minúsculo é ${nome.toLowerCase()}. </br>`);
+      document.write(
+        `O seu salário é ${sal.toLocaleString("pt-BR", {
+          style: "currency",
+          currency: "BRL",
+        })}. </br>`
+      ); //Brasil
+      document.write(
+        `O seu salário é ${sal.toLocaleString("pt-BR", {
+          style: "currency",
+          currency: "USD",
+        })}. </br>`
+      ); //USA
+      document.write(
+        `O seu salário é ${sal.toLocaleString("pt-BR", {
+          style: "currency",
+          currency: "EUR",
+        })}. </br>`
+      );
+    </script>
+  </body>
+</html>
